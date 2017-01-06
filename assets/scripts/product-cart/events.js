@@ -65,7 +65,7 @@ const getPriceTotal = function(){
         }
       }
     }
-    return total;
+    return total*100;
   })
   .then(ui.getPriceTotalSuccess)
   .catch(console.error);

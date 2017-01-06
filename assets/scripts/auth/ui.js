@@ -38,7 +38,7 @@ console.log('You\'ve successfully signed in!');
 // $('#authModal').hide();
 // show sign out button, change password buttons, view cart buttons
 $('.signed-in').show();
-
+$('.modal-message').html('');
 $('.signed-out').hide();
 $('#cart-button').hide();
 $('#checkout-button').hide();
@@ -69,6 +69,7 @@ const signOutSuccess = function() {
   $('.signed-out').show();
   $('#order-history').empty();
   clear('#signOutModal');
+  $('.modal-message').html('Please Sign-In To Add Watch to Cart');
 };
 
 const failure = function() {
