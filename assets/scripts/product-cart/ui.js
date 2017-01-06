@@ -24,6 +24,16 @@ const getAllProductsFailure = function() {
   console.log('FAIL to get all Products!');
 };
 
+const clear = (modal) => {
+    setTimeout(function() {
+        $(modal).modal('hide');
+    }, 1500);
+    // $(modal).on('hidden.bs.modal', function() {
+    //     $(this).find("input,textarea,select").val('').end();
+    //     // $('.modal-success').text('');
+    // });
+};
+
 const getOneProductSuccess = function(data) {
   console.log('Yay data', data);
    $('#one-product').html(showOneProductTemplate(data));
@@ -39,7 +49,8 @@ const addItemSuccess = function(data) {
   console.log('Item in cart', data);
   $('#cart-button').show();
   $('#checkout-button').show();
-  //  $('').html((data));
+  $('.ufm-single-product').html('Watch added to cart successfully!');
+  clear('#productModal');
   //  return data;
 };
 
@@ -61,6 +72,8 @@ const getItemsFailure = function(error) {
 
 const deleteItemSuccess = function(data) {
   console.log('deleted', data);
+  $('.ufm-cart').html('Watch deleted from cart successfully!');
+
 };
 
 const deleteItemFailure = function(error) {
@@ -69,6 +82,7 @@ const deleteItemFailure = function(error) {
 
 const updateItemSuccess = function(data) {
   console.log('Item quantity updated successfully.', data);
+  $('.ufm-cart').html('Watch quantity updated successfully!');
 };
 
 const updateItemFailure = function(error) {
@@ -113,8 +127,11 @@ const clearCart = function(){
     })
     .catch(deleteItemFailure);
   store.user.serialized = [];
-  $('.cart-items').html('Your order has been placed. View your Purchases to see past orders.');
+  $('.ufm-cart').html('Your order has been placed. View your Purchases to see past orders.');
+  $('.cart-items').empty();
+  $('.price-total').html('$0');
   $('#checkout-button').hide();
+  clear('#cart');
 };
 
 const createOrderHxSuccess = function(data) {
@@ -162,5 +179,6 @@ module.exports = {
   getOrderHxSuccess,
   getOrderHxFailure,
   clearCart,
+  clear,
 
 };

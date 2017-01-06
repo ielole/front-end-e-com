@@ -30,7 +30,7 @@
         <button class="nav-button" type="button" data-toggle="modal" data-target="#authModal" aria-haspopup="true" aria-expanded="false">Login / SignOut</button>
         <button class="nav-button signed-in" type="submit" data-toggle="modal" data-target="#orderHistoryModal">Purchases</button>
         <div id="gears">
-          <img class="gear_md" id="gear1" src="http://www.freeiconspng.com/uploads/gear-11-icon--free-icons-4.png" />
+          <img class="gear_md" id="gear1" src="http://www.freeiconspng.com/uploads/gear-11-icon--free-icons-4.png" alt="gear"/>
         </div>
     </div>
   </div>
@@ -71,10 +71,6 @@
 
 <div class="footer">
   <p class="footer-title">Developed By: The Mod Squad</p>
-  <a href="#" class="sqaud-link">Rick</a>
-  <a href="#" class="sqaud-link">Ariel</a>
-  <a href="#" class="sqaud-link">Peter</a>
-  <a href="#" class="sqaud-link">Adam</a>
 </div>
 
 <!-- AUTH button modal-->
@@ -222,7 +218,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
           <h2 class="modal-title">Modal title</h2>
-          <h4 class="modal-message">Please Sign-In Before Adding to Cart</h4>
+
 
 
         </div>
@@ -231,10 +227,10 @@
 
             <!-- product.handlebars template ENDS here -->
           </div>
+          <div class="modal-message">Please Sign-In To Add Watch to Cart</div>
         </div>
       </div><!-- /.modal-content -->
     </div>  <!-- /.modal-dialog -->
-  </div><!-- PRODUCT Modal ENDS here -->
   <!-- PRODUCT Modal ENDS here -->
 
 
@@ -267,11 +263,14 @@
     I'm in a CART!
   </div>
 
+  <h2>TOTAL</h2>
+  <div class="price-total"></div>
+
   <!--<h3 class="no-items">Your Cart is Empty!</h3>
   <h5>Total: </h5> -->
   <script src="https://checkout.stripe.com/checkout.js"></script>
   <button style="display: none" type="button" class="btn btn-default create-order" id="save-order-button">Save for later</button>
-  <p class="ufm-cart">This is a User Facing Message for Cart</p>
+  <p class="ufm-cart"></p>
   <button style="display" type="button" class="btn btn-default checkout" id="checkout-button">Checkout</button>
 </div>
 </div>
@@ -307,8 +306,7 @@
       <div class="modal-footer">
         <form id="get-orders">
           <fieldset>
-            <legend>Get Order History</legend>
-            <input type="submit" name="submit" value="Get Order History">
+            <input type="submit" name="submit" value="Get Purchase History">
           </fieldset>
         </form>
       </div>
