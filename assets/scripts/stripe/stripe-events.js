@@ -1,6 +1,6 @@
 'use strict';
 
-const productUi = require('../product-cart/ui.js');
+// const productUi = require('../product-cart/ui.js');
 const productEvents = require('../product-cart/events.js');
 const store = require('../store.js');
 
@@ -14,7 +14,7 @@ let handler = StripeCheckout.configure({
     let credentials = {
       stripeToken: token.id
     };
-    productUi.StripeCheckoutSuccess();
+    // productUi.StripeCheckoutSuccess();
     productEvents.onCreateOrderHx();
   }
 });

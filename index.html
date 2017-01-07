@@ -30,24 +30,24 @@
         <button class="nav-button" type="button" data-toggle="modal" data-target="#authModal" aria-haspopup="true" aria-expanded="false">Login / SignOut</button>
         <button class="nav-button signed-in" type="submit" data-toggle="modal" data-target="#orderHistoryModal">Purchases</button>
         <div id="gears">
-          <img class="gear_md" id="gear1" src="http://www.freeiconspng.com/uploads/gear-11-icon--free-icons-4.png" />
+          <img class="gear_md" id="gear1" src="http://www.freeiconspng.com/uploads/gear-11-icon--free-icons-4.png" alt="gear"/>
         </div>
     </div>
   </div>
 
 <div class="about">
-  <h3 class="about-heading">About <br> Watchy McWatchface</h3>
+  <h3 class="about-heading">About <br> Watchy McWatchface <span class="trademark">&reg;</span></h3>
     <hr class="line">
     <div class="placeholder-text-wrapper">
     <p class="placeholder-text">
-      Bacon ipsum dolor amet t-bone sausage jerky beef ribs pig bresaola corned beef beef
-      boudin cow doner rump burgdoggen short ribs. Strip steak biltong kevin
-      sirloin porchetta. Cupim jerky cow, landjaeger pork loin turducken.
+      Watchy McWatchface has been a respected and well-know crafter of high-end
+      timepieces for over 100 years. Classic styles and rugged durability have
+      been the cornerstones of our products.
     </p>
     <p class="placeholder-text">
-      Fatback ball tip short ribs doner meatloaf turducken, t-bone brisket.
-      Fatback pork burgdoggen pancetta doner turkey ham pork belly salami meatball
-      bacon alcatra cow. Prosciutto alcatra filet mignon leberkas pork loin short
+      Whether you're climbing a mountain, SCUBA diving in the sea or leading a
+      successful company, McWatchface watches will show your appreciation of
+      reliability, quality, elgence and style.
     </p>
   </div>
 </div>
@@ -71,10 +71,6 @@
 
 <div class="footer">
   <p class="footer-title">Developed By: The Mod Squad</p>
-  <a href="#" class="sqaud-link">Rick</a>
-  <a href="#" class="sqaud-link">Ariel</a>
-  <a href="#" class="sqaud-link">Peter</a>
-  <a href="#" class="sqaud-link">Adam</a>
 </div>
 
 <!-- AUTH button modal-->
@@ -220,8 +216,11 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h2 class="modal-title">Modal title</h2>
-          <h4 class="modal-message">Please Sign-In Before Adding to Cart</h4>
+
+          <h3 class="modal-title">McWatchface</h3>
+          <h4 class="modal-title">Elegance and Practicality</h4>
+
+
 
         </div>
         <div  id="one-product" class="modal-body">
@@ -229,16 +228,16 @@
 
             <!-- product.handlebars template ENDS here -->
           </div>
+          <div class="modal-message">Please Sign-In To Add Watch to Cart</div>
         </div>
       </div><!-- /.modal-content -->
     </div>  <!-- /.modal-dialog -->
-  </div><!-- PRODUCT Modal ENDS here -->
   <!-- PRODUCT Modal ENDS here -->
 
 
 <!--CART modal STARTS here -->
 <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="cartLabel">
-<div class="modal-dialog-cart" role="document">
+<div class="modal-dialog" role="document">
 <div class="modal-content">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -250,14 +249,14 @@
     <div class="col-sm-3">
       <h5>Item</h5>
     </div>
-    <div class="col-xs-3">
+    <div class="col-xs-2">
       <h5>Price</h5>
     </div>
     <div class="col-xs-3">
-      <h5>Quantity</h5>
-    </div>
-    <div class="col-xs-3">
       <h5>Delete</h5>
+    </div>
+    <div class="col-xs-4">
+      <h5>Quantity</h5>
     </div>
     <br>
   </div>
@@ -265,11 +264,14 @@
     I'm in a CART!
   </div>
 
+  <h2>TOTAL</h2>
+  <div class="price-total"></div>
+
   <!--<h3 class="no-items">Your Cart is Empty!</h3>
   <h5>Total: </h5> -->
   <script src="https://checkout.stripe.com/checkout.js"></script>
   <button style="display: none" type="button" class="btn btn-default create-order" id="save-order-button">Save for later</button>
-  <p class="ufm-cart">This is a User Facing Message for Cart</p>
+  <p class="ufm-cart"></p>
   <button style="display" type="button" class="btn btn-default checkout" id="checkout-button">Checkout</button>
 </div>
 </div>
@@ -288,11 +290,11 @@
         <h4 class="modal-title">Purchase History</h4>
       </div>
       <div class="modal-body">
-        <div class="order-history-header-wrapper">
-          <p class="order-history-header col-xs-4">Order: </p>
-          <p class="order-history-header col-xs-4">Items: </p>
-          <p class="order-history-header col-xs-4">Date: </p>
-        </div>
+        <!-- <div class="order-history-header-wrapper">
+          <p class="order-history-header ">Order: </p>
+          <p class="order-history-header ">Items: </p>
+          <p class="order-history-header ">Date: </p>
+        </div> -->
         <div id="order-history" class="order-history-handlebars">
           <!-- order-history.handlebars.js STARTS here -->
       <!--  <div class="order-history-wrapper">
@@ -305,8 +307,7 @@
       <div class="modal-footer">
         <form id="get-orders">
           <fieldset>
-            <legend>Get Order History</legend>
-            <input type="submit" name="submit" value="Get Order History">
+            <input type="submit" name="submit" value="Get Purchase History">
           </fieldset>
         </form>
       </div>

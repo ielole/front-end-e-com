@@ -56,6 +56,11 @@ module.exports = {
         {
           test: /\.(hbs|handlebars)$/,
           loader: 'handlebars-loader',
+          query: {
+            helperDirs: [
+              __dirname + '/../assets/scripts/templates/helpers',
+            ],
+          },
         },
         {
           test: /\.html\.(hbs|handlebars)$/,
@@ -64,6 +69,11 @@ module.exports = {
       ],
     },
 
+    resolve: {
+      alias:{
+        handlebars: 'handlebars/dist/handlebars.js',
+      },
+    },
     stats: {
       colors: true,
       modules: true,

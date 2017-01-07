@@ -27,18 +27,18 @@ const signUpFailure = function() {
 };
 
 const signInSuccess = function(data) {
-  console.log(data.user);
+  // console.log(data.user);
   // $('.cart-add').show();
   store.user = data.user;
   store.user.id = data.user._id;
-  console.log(store.user);
+  // console.log(store.user);
 $('#sign-in').trigger('reset');
-console.log('You\'ve successfully signed in!');
+// console.log('You\'ve successfully signed in!');
 // $('#signInModal').hide(2000);
 // $('#authModal').hide();
 // show sign out button, change password buttons, view cart buttons
 $('.signed-in').show();
-
+$('.modal-message').html('');
 $('.signed-out').hide();
 $('#cart-button').hide();
 $('#checkout-button').hide();
@@ -69,6 +69,7 @@ const signOutSuccess = function() {
   $('.signed-out').show();
   $('#order-history').empty();
   clear('#signOutModal');
+  $('.modal-message').html('Please Sign-In To Add Watch to Cart');
 };
 
 const failure = function() {
