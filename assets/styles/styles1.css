@@ -192,7 +192,7 @@
 }
 
 /*///// AUTH modal styles /////*/
-.ufm-change-password, .ufm-cart, .ufm-single-product, .cart-items {
+.ufm-change-password, .ufm-cart, .ufm-single-product, /*.cart-items */{
   font-family: 'Heebo', sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -472,6 +472,15 @@ position: relative;
     overflow: auto;
 }
 
+.quantity {
+  width: 40px;
+  margin-left: 40px;
+}
+
+/*.update-cart-item {
+  margin-right: 10px;
+}*/
+
 .cart-item-price {
     float: left;
     padding-top: 4px;
@@ -484,7 +493,7 @@ position: relative;
   border: solid 1px black;
   padding: 10px;
   font-weight: 400;
-  width: 15%;
+  /*width: 20%;*/
 }
 
 /*.cart-add {
@@ -493,7 +502,7 @@ position: relative;
 
 .checkout-button {
   float: right;
-  width: 30%;
+  /*width: 30%;*/
   height: 30px;
   color: red;
   border: none;
@@ -506,47 +515,56 @@ position: relative;
 
 /* order-history.handlebars STARTS here */
 
-.order-history-header-wrapper {
-  /*border: 1px solid purple;*/
+/*.order-history-header-wrapper {
+  border: 1px solid purple;
   clear: both;
   overflow: auto;
 
-}
+}*/
 
-.order-history-header {
+/*.order-history-header {
     float: left;
     font-size: 4vmin;
-    /*width: 14vw;*/
+    /*width: 14vw;
     border-bottom: 1px solid grey;
     border-right: 1px solid grey;
     text-align: center;
-    /* margin: 0 auto; */
+    /* margin: 0 auto;
+}*/
+
+.order-history-handlebars {
+  height: 300px;
+  overflow: scroll;
 }
 
-.order-history-wrapper {
-  /*border: 1px solid cyan;*/
+.order-hx {
+  border-top-color: #000;
+}
+
+/*.order-history-wrapper {
+  border: 1px solid cyan;
   clear: both;
   overflow: auto;
-}
+}*/
 
-.order-history-items {
+/*.order-history-items {
   overflow: scroll;
   border-bottom: 2px solid black;
-}
+}*/
 
-.order-history-items > p {
+/*.order-history-items > p {
   float: left;
   margin: 0;
-}
+}*/
 
-.order-history-id, .order-history-items, .order-history-date {
+/*.order-history-id, .order-history-items, .order-history-date {
   float: left;
   font-size: 12px;
   /*width: 15vw;*/
-  border-bottom: 1px solid grey;
+  /*border-bottom: 1px solid grey;
   margin-top: 10px;
-  height: 40px;
-}
+  /*height: 40px;
+}*/
 
 
 .bold-span{
@@ -554,15 +572,15 @@ position: relative;
 }
 
 .order-history-thumb{
-  display: block;
-  float: right;
-  height: 20px;
-  width: 20px;
+  /*display: block;*/
+  /*float: right;*/
+  height: 40px;
+  width: 40px;
 }
 
- .modal-footer {
+ /*.modal-footer {
   border-top: 0px solid !important;
-}
+}*/
 
 .footer{
   width: 100%;

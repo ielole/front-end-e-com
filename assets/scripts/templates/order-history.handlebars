@@ -1,14 +1,19 @@
 {{#each orders as |order|}}
-  <div class="order-history-wrapper">
-    <p class="order-history-id col-xs-4">{{order._id}}</p>
-    <div class="order-history-items col-xs-4">
+<hr class="order-hx">
+  <div>
+    <p><span class="bold-span">Order number: </span>{{order._id}}</p>
+    <p><span class="bold-span">Order date: </span>{{order.createdAt}}</p>
+    <div>
       {{#each items as |item|}}
-      <p data-id={{item._id}}><span class="bold-span">Item name: </span>{{item.name}}</p>
-      <p data-id={{item._id}}><span class="bold-span">Item price: </span>${{pricedivide item.price}}</p>
-      <p data-id={{item._id}}><span class="bold-span">Item count: </span>{{item.count}}</p>
-      <img src={{item.image}} alt="watch" class="order-history-thumb"/>
+      <hr>
+      <div class="row">
+        <div class="col-xs-3"><img src={{item.image}} alt="watch" style="width: 40px; height: 40px;"/></div>
+        <div class="col-xs-3"><span class="bold-span">Item name: </span>{{item.name}}</div>
+        <div class="col-xs-3"><span class="bold-span">Price: </span>${{pricedivide item.price}}</div>
+        <div class="col-xs-3"><span class="bold-span">Quantity: </span>{{item.count}}</div>
+      </div>
       {{/each}}
     </div>
-    <p class="order-history-date col-xs-4">Order date: {{order.createdAt}}</p>
+
   </div>
 {{/each}}

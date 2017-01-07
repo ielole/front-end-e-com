@@ -4,7 +4,7 @@
 // const Handlebars = require('handlebars');
 
 module.exports = function (price) {
-  console.log('price is ', price);
+  // console.log('price is ', price);
    let productPrice = ((price/100)+'.00');
    return productPrice;
 };
