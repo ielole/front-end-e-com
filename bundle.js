@@ -3183,7 +3183,7 @@ webpackJsonp([0],[
 	  handler.open({
 	    name: 'ModSquad',
 	    description: 'purchase',
-	    amount: total * 100
+	    amount: total
 	  });
 	  // console.log(total);
 	};
