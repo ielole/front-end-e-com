@@ -28,7 +28,7 @@ const onCheckout = (event) => {
   handler.open({
     name: 'ModSquad',
     description: 'purchase',
-    amount: (total*100)
+    amount: total
   });
   // console.log(total);
 };
