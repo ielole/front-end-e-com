@@ -69,6 +69,8 @@ const signOutSuccess = function() {
   $('.signed-out').show();
   $('#order-history').empty();
   clear('#signOutModal');
+  $('.signup-messages').html('');
+  $('.signin-messages').html('');
   $('.modal-message').html('Please Sign-In To Add Watch to Cart');
 };
 
