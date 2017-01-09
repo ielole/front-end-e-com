@@ -599,15 +599,9 @@ position: relative;
 
 .footer-title{
   font-family: 'Oswald', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   color: rgba(254, 48, 48, 1);
   padding-left: 10px;
-}
-
-.sqaud-link {
-  display: block;
-  color: white;
-  font-size: 12px;
-  padding-left: 10px;
+  padding-top: 10px;
   text-decoration: none;
 }
