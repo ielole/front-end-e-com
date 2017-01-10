@@ -38,11 +38,13 @@ $('#sign-in').trigger('reset');
 // $('#authModal').hide();
 // show sign out button, change password buttons, view cart buttons
 $('.signed-in').show();
-$('.modal-message').html('');
+// $('.modal-message').html('');
 $('.signed-out').hide();
 $('#cart-button').hide();
 $('#checkout-button').hide();
+$('.signout-messages').html('');
 $('.signin-messages').html('You have logged in!');
+$('.ufm-single-product').html('');
 clear('#signInModal');
 };
 
