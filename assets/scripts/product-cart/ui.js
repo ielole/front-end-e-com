@@ -55,9 +55,10 @@ const addItemSuccess = function() {
   //  return data;
 };
 
-const addItemFailure = function(error) {
-  console.log('FAIL!', error);
-  console.log('Log in to add items to your cart.');
+const addItemFailure = function() {
+  // console.log('FAIL!', error);
+  // console.log('Log in to add items to your cart.');
+  $('.ufm-single-product').html('Log in to add items to your cart.');
 };
 
 const getItemsSuccess = function(data) {

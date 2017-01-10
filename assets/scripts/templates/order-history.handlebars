@@ -3,14 +3,16 @@
   <div>
     <p><span class="bold-span">Order number: </span>{{order._id}}</p>
     <p><span class="bold-span">Order date: </span>{{order.createdAt}}</p>
+
     <div>
       {{#each items as |item|}}
       <hr>
       <div class="row">
         <div class="col-xs-3"><img src={{item.image}} alt="watch" style="width: 40px; height: 40px;"/></div>
         <div class="col-xs-3"><span class="bold-span">Item name: </span>{{item.name}}</div>
-        <div class="col-xs-3"><span class="bold-span">Price: </span>${{pricedivide item.price}}</div>
+        <div class="col-xs-3"><span class="bold-span">Item Price: </span>${{pricedivide item.price}}</div>
         <div class="col-xs-3"><span class="bold-span">Quantity: </span>{{item.count}}</div>
+        <!-- <div class="col-xs-2"><span class="bold-span">Total: </span>${{ordertotal item.price item.count}}</div> -->
       </div>
       {{/each}}
     </div>
