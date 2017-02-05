@@ -31,10 +31,10 @@ and purchase items via a shopping cart. Our product is designer watches.
 Day One was reserved for project planning.  We completed an ERD as well as a
 majority of the user stories and plans to address.
 
-- ![ERD](http://evolutiontalk.com/images/modsquad/erd.jpg)
+- [ERD](http://evolutiontalk.com/images/modsquad/erd.jpg)
 - [User Stories](http://evolutiontalk.com/images/modsquad/us/)
-- ![Wireframes](http://evolutiontalk.com/images/modsquad/wireframes.jpg)
-- ![Meeting Minutes for Day One Planning](http://evolutiontalk.com/images/modsquad/20161215.png)
+- [Wireframes](http://evolutiontalk.com/images/modsquad/wireframes.jpg)
+- [Meeting Minutes for Day One Planning](http://evolutiontalk.com/images/modsquad/20161215.png)
 
 Using the SCRUM methodology we kept each other updated on progress and adjusted
 the day's activities as necessary.
